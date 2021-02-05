@@ -1,0 +1,14 @@
+.wrap {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 32px 16px 0 32px; // gap glutter
+}

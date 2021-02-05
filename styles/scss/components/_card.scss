@@ -1,0 +1,207 @@
+.card {
+    width: 100%;
+    min-width: 256px;
+    max-width: 260px;
+    height: 340px;
+    margin: 0 16px 32px 0; // gap glutter
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px rgba(34, 44, 53, 0.05), 0px 1px 3px rgba(34, 44, 53, 0.15);
+    border-radius: 3px;
+    transition: transform .6s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        .card__content-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    // SLIDER STYLES 
+    // ========================================================#
+    &__slider {
+        display: flex;
+        height: 132px;
+        margin: 8px 0 0 8px; // gap glutter
+        overflow-x: auto;
+    }
+   
+    &__slider-item {
+        height: 132px;
+        width: 132px;
+        margin-right: 4px;
+        object-fit: cover;
+        background-color: coral;
+    }
+    // CONTENT STYLES 
+    // ========================================================#
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 12px;
+    }
+
+    &__content:focus {
+        outline: none;
+    }
+
+    &__avatar {
+        position: absolute;
+        bottom: 90px;
+        height: 76px;
+        width: 76px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-top: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #222C35;
+    }
+
+    &__sex,
+    &__brand {
+        display: inline-flex;
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #919CAB;
+    }
+
+    &__age {
+        display: inline-flex;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #919CAB;
+    }
+
+    &__job {
+        font-size: 14px;
+        line-height: 20px;
+        color: #636F81;
+    }
+    // content devider
+    &__content::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 48px;
+        height: 2px;
+        background: #E1E6EA;
+    }
+
+    &__content-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding-top: 10px;
+        transition: opacity .6s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    // CHECKBOX STYLES 
+    // ========================================================#
+    &__content-menu input[type=checkbox]{
+        width: 16px;
+        height: 16px;
+        display: none;
+    }
+
+    &__content-menu label{
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        border: 1px solid #C4CCD5;
+        cursor: pointer;
+    }
+    // BUTTON CONTENT MENU STYLES 
+    // ========================================================#
+    &__content-button {
+        display: flex;
+        align-items: center;
+        width: 30px;
+        height: 12px;
+        border-radius: 10px;
+        transition: background-color .6s ease;
+    }
+
+    &__content-button:hover {
+        background-color: #E1E6EA;
+    }
+
+    &__content-button span {
+        position: relative;
+        display: block;
+        width: 4px;
+        height: 4px;
+        margin-left: 5px;
+        border-radius: 50%;
+        background: #636F81;
+    }
+
+    &__content-button span::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 8px;
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #636F81;
+    }
+
+    &__content-button span::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 16px;
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #636F81;
+    }
+    // SOCIAL LINKS STYLES 
+    // ========================================================#
+    &__socials {
+        display: flex;
+        justify-content: center;
+        padding: 18px 32px 0;
+        text-align: center;
+    }
+    &__socials-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 6px;
+    }
+
+    &__socials-link svg path{
+        transition: fill .6s ease;
+    }
+
+    &__socials-link:focus {
+        outline: none;
+    }
+
+    &__socials-link svg:hover path{
+        fill: #4F4F4F;
+    }
+
+    &__socials-count {
+        font-size: 14px;
+        line-height: 20px;
+        color: #222C35;
+    }
+}
